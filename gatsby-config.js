@@ -1,14 +1,19 @@
+require("dotenv").config();
+
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://bendechrai.com",
     title: "Ben Dechrai",
+    description: "Technologist · Public Speaker · Hacker",
+    author: `@bendechrai`,
   },
   plugins: [
     {
       resolve: "gatsby-source-sanity",
       options: {
-        projectId: "25j8m6qv",
-        dataset: "production",
+        projectId: process.env.GATSBY_SANITY_PROJECTID,
+        dataset: process.env.GATSBY_SANITY_DATASET,
+        token: process.env.SANITY_READ_TOKEN,
       },
     },
     "gatsby-plugin-sass",
