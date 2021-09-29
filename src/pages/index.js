@@ -192,7 +192,7 @@ const IndexPage = ({ data }) => {
               International PHP Conference
             </Link>
           </p>
-          <p>Being held online and in person in München, Germany. I'll be talking about kittens, and their use in laundry as a service operators.</p>
+          <p>Being held online and in person in München, Germany. I'll be talking about kittens, and their use in laundry-as-a-service operations.</p>
         </div>
         <div>
           <h2>About Me</h2>
