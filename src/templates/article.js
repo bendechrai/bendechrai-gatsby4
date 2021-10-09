@@ -55,7 +55,16 @@ const Article = ({ data }) => {
       <pre>{JSON.stringify(data, null, 2)}</pre>
       <div className="article">
         <div className="hero">
-          <img src={builder.image(data.article.image).width(800).height(250).url()} alt={data.article.image.alt} title={data.article.image.alt} />
+          {(data.article.image && (
+            <img src={builder.image(data.article.image).width(400).height(225).url()} alt={data.article.image.alt} title={data.article.image.alt} />
+          )) || (
+            // eslint-disable-next-line jsx-a11y/img-redundant-alt
+            <img
+              src="../images/flamingo.jpg"
+              alt="There was no image for this content, so here's a photo of a flamingo instead."
+              title="There was no image for this content, so here's a photo of a flamingo instead."
+            />
+          )}
         </div>
         <h1>{data.article.title}</h1>
         <div className="tags">
