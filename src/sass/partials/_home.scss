@@ -9,6 +9,7 @@
   .content-item {
     display: grid;
     grid-template-columns: 100px 1fr 70px;
+    grid-template-rows: min-content;
     align-items: end;
 
     isolation: isolate;
