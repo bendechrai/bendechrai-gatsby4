@@ -24,7 +24,6 @@
       height: fit-content;
       padding: var(--window-padding-vertical) var(--window-padding-horizontal);
       background-color: hsl(var(--colour-highlight-hue), var(--colour-highlight-sat), var(--colour-highlight-lum), 0.8);
-      font-size: clamp(1rem, 3vw + 0.5rem, 3rem);
     }
 
     img {
@@ -35,7 +34,7 @@
     }
 
     p {
-      grid-column: 1/-1;
+      grid-column: 1/4;
       padding: 0 var(--window-padding-horizontal);
     }
   }

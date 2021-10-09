@@ -25,8 +25,25 @@ html {
 
         main {
           flex-grow: 1;
+          max-width: 1250px;
+          margin: 0 auto;
         }
       }
     }
   }
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1rem;
+}
+.split > * {
+  padding: 0 1em;
+}
+.split-highlight > * {
+  background-color: #fff1;
+}
+.split-highlight > a:hover {
+  background-color: rgb(var(--colour-highlight) / 0.6);
 }

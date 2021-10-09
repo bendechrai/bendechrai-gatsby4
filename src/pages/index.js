@@ -153,13 +153,18 @@ const IndexPage = ({ data }) => {
           fun.
         </p>
         <img alt="Ben Dechrai at a community event" src="/images/bendechrai.jpg" />
-        <Link to="/about/" className="button button-big full-width">
-          Read all testimonials, and book me to speak at your event!
-        </Link>
+        <div>
+          <Link to="/talks/" className="button button-big full-width">
+            See my list of talks and workshops
+          </Link>
+          <Link to="/about/" className="button button-big full-width">
+            Read all testimonials
+          </Link>
+        </div>
       </section>
       <section>
+        <h2>Recent Articles</h2>
         <div className="split split-highlight content-list">
-          <h2>Recent Articles</h2>
           {latest.splice(0, 6).map((content) => (
             <Link to={content.link} className="content-item" key={content.item.slug.current}>
               <h3>{content.item.title}</h3>
