@@ -10,7 +10,7 @@ section.hero {
   max-width: 800px;
   padding: calc(var(--window-padding-vertical) * 2) var(--window-padding-horizontal);
 
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 850px) {
     margin: clamp(0em, 6vw, 5em) auto;
     rotate: -1deg;
   }

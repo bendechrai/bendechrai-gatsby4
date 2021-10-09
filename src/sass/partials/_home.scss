@@ -1,4 +1,11 @@
 .content-list {
+  @media screen and (min-width: 500px) {
+    margin: 1em var(--window-padding-horizontal);
+    .content-item {
+      border-radius: 5px;
+    }
+  }
+
   .content-item {
     display: grid;
     grid-template-columns: 100px 1fr 70px;
@@ -7,7 +14,7 @@
     isolation: isolate;
     color: #fff;
 
-    padding: 1em 0;
+    padding: 1em var(--window-padding-horizontal);
     margin: 1em 0;
 
     &:hover {
