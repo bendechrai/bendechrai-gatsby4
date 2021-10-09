@@ -1,0 +1,30 @@
+section.hero {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  row-gap: 1em;
+  background-color: var(--primary-colour);
+  box-shadow: 0 0px 5px #000;
+
+  max-width: 800px;
+  margin: 0;
+  padding: calc(var(--window-padding-vertical) * 2) var(--window-padding-horizontal);
+
+  .quote {
+    margin: 0;
+    font-family: var(--ff-script);
+    font-size: 1.3em;
+  }
+
+  img {
+    border-radius: 50%;
+    min-width: 100px;
+    width: 100%;
+    max-width: 150px;
+  }
+
+  a.button {
+    grid-column: 1/3;
+    font-size: 1em;
+  }
+}

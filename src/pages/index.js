@@ -6,7 +6,7 @@ import useImageUrlBuilder from "../hooks/use-image-url-builder";
 
 export const query = graphql`
   {
-    allSanityArticle(limit: 3, sort: { fields: publishDate___local, order: DESC }) {
+    allSanityArticle(limit: 6, sort: { fields: publishDate___local, order: DESC }) {
       nodes {
         title
         slug {
@@ -128,14 +128,14 @@ const IndexPage = ({ data }) => {
       item,
     });
   });
-  data.allSanityEvent.nodes.forEach((item) => {
-    latest.push({
-      type: "events",
-      date: item.publishDate.local,
-      link: `/events/${item.slug.current}`,
-      item,
-    });
-  });
+  // data.allSanityEvent.nodes.forEach((item) => {
+  //   latest.push({
+  //     type: "events",
+  //     date: item.publishDate.local,
+  //     link: `/events/${item.slug.current}`,
+  //     item,
+  //   });
+  // });
   data.allSanityVideo.nodes.forEach((item) => {
     latest.push({
       type: "videos",
@@ -148,31 +148,26 @@ const IndexPage = ({ data }) => {
   return (
     <Layout title="Home">
       <section className="hero">
-        <div>
-          <p className="quote">
-            A creative, entertaining, and highly technical public speaker, Ben excels at connecting and engaging with audiences of all levels and making any
-            topic fun.
-          </p>
-          <div>
-            <StaticImage alt="Ben Dechrai at a community event" src="../images/bendechrai.jpg" />
-          </div>
-        </div>
-        <p>
-          <Link to="/about/" className="button button-big full-width">
-            Read all testimonials, and book me to speak at your event!
-          </Link>
+        <p className="quote">
+          A creative, entertaining, and highly technical public speaker, Ben excels at connecting and engaging with audiences of all levels and making any topic
+          fun.
         </p>
+        <img alt="Ben Dechrai at a community event" src="/images/bendechrai.jpg" />
+        <Link to="/about/" className="button button-big full-width">
+          Read all testimonials, and book me to speak at your event!
+        </Link>
       </section>
       <section>
-        <h2>Latest Content</h2>
-        <div className="split split-highlight">
-          {latest.splice(0, 3).map((content) => (
-            <Link to={content.link} key={content.item.slug.current}>
+        <div className="split split-highlight content-list">
+          <h2>Recent Articles</h2>
+          {latest.splice(0, 6).map((content) => (
+            <Link to={content.link} className="content-item" key={content.item.slug.current}>
               <h3>{content.item.title}</h3>
               {(content.item.image && (
                 <img src={builder.image(content.item.image).width(400).height(225).url()} alt={content.item.image.alt} title={content.item.image.alt} />
               )) || (
-                <StaticImage
+                // eslint-disable-next-line jsx-a11y/img-redundant-alt
+                <img
                   src="../images/flamingo.jpg"
                   alt="There was no image for this content, so here's a photo of a flamingo instead."
                   title="There was no image for this content, so here's a photo of a flamingo instead."

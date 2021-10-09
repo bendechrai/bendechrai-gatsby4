@@ -1,0 +1,40 @@
+:root {
+  /* Content widths */
+  --max-content-width: 80em;
+  --max-hero-width: 50em;
+
+  /* Window padding */
+  --window-padding-vertical: 0.5em;
+  --window-padding-horizontal: 1em;
+
+  /* Primary colour */
+  --primary-colour-hue: 168;
+  --primary-colour-sat: 100%;
+  --primary-colour-lum: 14%;
+  --primary-colour: hsl(var(--primary-colour-hue), var(--primary-colour-sat), var(--primary-colour-lum));
+
+  /* Header background */
+  --header-background-color: hsl(var(--primary-colour-hue), var(--primary-colour-sat), var(--primary-colour-lum));
+
+  /* Background gradient */
+  --background-colour-hue: 168;
+  --background-colour-sat: 100%;
+  --background-colour-lum: 14%;
+  --background-colour: hsl(var(--background-colour-hue), var(--background-colour-sat), var(--background-colour-lum));
+  --background-gradient-colour-start: hsl(var(--background-colour-hue), var(--background-colour-sat), var(--background-colour-lum));
+  --background-gradient-colour-end: hsl(var(--background-colour-hue), var(--background-colour-sat), calc(var(--background-colour-lum) + 10%));
+  --background-gradient-angle: 150deg;
+
+  /* Highlight colour */
+  --colour-highlight-hue: 166;
+  --colour-highlight-sat: 24%;
+  --colour-highlight-lum: 58%;
+  --colour-highlight: hsl(var(--colour-highlight-hue), var(--colour-highlight-sat), var(--colour-highlight-lum));
+
+  /* Button gradient */
+  --button-gradient-colour-start: #00628e;
+  --button-gradient-colour-end: #00628e;
+  --button-gradient-colour-start-hover: #97d6c9;
+  --button-gradient-colour-end-hover: #a8d6cc;
+  --button-gradient-angle: 0deg;
+}

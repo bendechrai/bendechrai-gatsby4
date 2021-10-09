@@ -1,0 +1,25 @@
+footer {
+  padding: calc(var(--window-padding-vertical) * 2) var(--window-padding-horizontal);
+  section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  p {
+    margin: 0;
+    color: #fff7;
+  }
+  ul {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    gap: 1em;
+    list-style: none;
+    a {
+      color: #fff7;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}

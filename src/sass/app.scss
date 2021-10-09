@@ -1,322 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-:root {
-    /* Main page gradient */
-    --colour-gradient-start: #00271f;
-    --colour-gradient-end: #126645;
-    --angle-gradient: 150deg;
-    /* Highlight colour */
-    --colour-highlight: 122 174 162;
-    /* Button gradient */
-    --colour-button-gradient-start: #87beb2;
-    --colour-button-gradient-end: #95beb5;
-    --colour-button-gradient-start-hover: #97d6c9;
-    --colour-button-gradient-end-hover: #a8d6cc;
-    --angle-button-gradient: 0deg;
-    /* Content widths */
-    --max-content-width: 80em;
-    --max-hero-width: 50em;
-}
-
-body,
-html {
-    flex-direction: column;
-    font-family: Poppins, sans-serif;
-    font-size: 0.88rem;
-    color: #ddd;
-    background: -webkit-linear-gradient(var(--angle-gradient), var(--colour-gradient-start), var(--colour-gradient-end));
-    background: -moz-linear-gradient(var(--angle-gradient), var(--colour-gradient-start), var(--colour-gradient-end));
-    background: -ms-linear-gradient(var(--angle-gradient), var(--colour-gradient-start), var(--colour-gradient-end));
-    background: -o-linear-gradient(var(--angle-gradient), var(--colour-gradient-start), var(--colour-gradient-end));
-    background: linear-gradient(var(--angle-gradient), var(--colour-gradient-start), var(--colour-gradient-end));
-    background-attachment: fixed;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-a {
-    color: #ddd;
-    text-decoration: none;
-}
-
-main {
-    flex-grow: 1;
-}
-
-footer {
-    margin-top: clamp(1rem, 2.5vw, 2rem);
-}
-
-footer section {
-    display: flex;
-    justify-content: space-between;
-}
-
-footer p {
-    color: #fff7;
-}
-
-footer ul {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    list-style: none;
-}
-
-footer ul a {
-    color: #fff7;
-}
-
-footer ul a:hover {
-    color: #fff;
-}
-
-main>section,
-footer>section {
-    padding: 0 1em;
-    width: 100%;
-    max-width: var(--max-content-width);
-    margin: 0 auto;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-}
-
-img.round {
-    border-radius: 50%;
-}
-
-button,
-.button {
-    text-align: center;
-    padding: 0.3em 0.6em;
-    color: var(--colour-gradient-start);
-    background: -webkit-linear-gradient(var(--angle-button-gradient), var(--colour-button-gradient-start), var(--colour-button-gradient-end));
-    background: -moz-linear-gradient(var(--angle-button-gradient), var(--colour-button-gradient-start), var(--colour-button-gradient-end));
-    background: -ms-linear-gradient(var(--angle-button-gradient), var(--colour-button-gradient-start), var(--colour-button-gradient-end));
-    background: -o-linear-gradient(var(--angle-button-gradient), var(--colour-button-gradient-start), var(--colour-button-gradient-end));
-    background: linear-gradient(var(--angle-button-gradient), var(--colour-button-gradient-start), var(--colour-button-gradient-end));
-    border: none;
-    border-radius: 3px;
-    font-size: 1.2em;
-}
-
-button:hover,
-.button:hover {
-    background: -webkit-linear-gradient(var(--angle-button-gradient), var(--colour-button-gradient-start-hover), var(--colour-button-gradient-end-hover));
-    background: -moz-linear-gradient(var(--angle-button-gradient), var(--colour-button-gradient-start-hover), var(--colour-button-gradient-end-hover));
-    background: -ms-linear-gradient(var(--angle-button-gradient), var(--colour-button-gradient-start-hover), var(--colour-button-gradient-end-hover));
-    background: -o-linear-gradient(var(--angle-button-gradient), var(--colour-button-gradient-start-hover), var(--colour-button-gradient-end-hover));
-    background: linear-gradient(var(--angle-button-gradient), var(--colour-button-gradient-start-hover), var(--colour-button-gradient-end-hover));
-}
-
-.button-big {
-    padding: 1em 1em;
-}
-
-.full-width {
-    display: block;
-    width: 100%;
-}
-
-
-/* GENERAL FORMATTING */
-
-
-/* GENERAL FORMATTING */
-
-
-/* GENERAL FORMATTING */
-
-
-/* GENERAL FORMATTING */
-
-
-/* GENERAL FORMATTING */
-
-.split {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-}
-
-.split>* {
-    padding: 0 1em;
-}
-
-.split-highlight>* {
-    background-color: #fff1;
-}
-
-.split-highlight>a:hover {
-    background-color: rgb(var(--colour-highlight)/.6);
-}
-
-
-/* HEADER */
-
-
-/* HEADER */
-
-
-/* HEADER */
-
-
-/* HEADER */
-
-
-/* HEADER */
-
-header {
-    background-color: rgb(var(--colour-highlight));
-}
-
-header section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em;
-    width: 100%;
-    max-width: var(--max-content-width);
-    margin: 0 auto;
-}
-
-header .logo a {
-    display: flex;
-    color: var(--colour-gradient-start)
-}
-
-header .logo a:hover {
-    color: #fff;
-}
-
-header nav a {
-    font-weight: 500;
-}
-
-header nav label {
-    display: none;
-}
-
-header nav ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    gap: 1em;
-}
-
-header nav ul li .button {
-    padding: 0.5em 1em;
-}
-
-
-/* HIDE HAMBURGER */
-
-header nav label,
-header nav input {
-    display: none;
-}
-
-
-/* [ON SMALL SCREENS] */
-
-@media screen and (max-width: 30em) {
-    /* Show hamburger icon and hide menu items */
-    header nav label {
-        display: inline-block;
-        color: #111;
-        font-style: normal;
-        font-size: 1.4em;
-        transition-duration: .2s;
-    }
-    header nav ul {
-        display: block;
-        position: absolute;
-        top: 4.2em;
-        left: 0;
-        right: 0;
-        max-height: 0;
-        transition: max-height 0.3s ease-in-out;
-        background-color: #000e;
-        overflow: hidden;
-    }
-    header nav ul li .button {
-        display: block;
-        padding: 2em;
-        color: #aaa;
-        background-color: inherit;
-    }
-    header nav ul li .button:hover {
-        color: #fff;
-    }
-    /* If hamburger clicked, rotate icon and show menu items */
-    header nav input:checked~label {
-        rotate: 90deg;
-    }
-    header nav input:checked~ul {
-        max-height: 100vh;
-    }
-}
-
-
-/* HERO */
-
-
-/* HERO */
-
-
-/* HERO */
-
-
-/* HERO */
-
-
-/* HERO */
-
-section.hero {
-    color: var(--colour-gradient-start);
-    background-color: rgb(var(--colour-highlight));
-    padding: 1em;
-    min-width: 25em;
-}
-
-section.hero>div {
-    display: flex;
-    gap: clamp(1em, 5vw, 3em);
-}
-
-@media screen and (min-width: 40em) {
-    section.hero {
-        max-width: var(--max-hero-width);
-        rotate: -1deg;
-        box-shadow: 4px 4px 8px #000a;
-        border-radius: 3px;
-        margin: clamp(2em, 5vw, 6em) auto;
-    }
-    section.hero>div {
-        align-items: center;
-    }
-}
-
-p.quote {
-    font-family: "Dancing Script", cursive;
-    font-size: clamp(1.7em, 5vw, 2.3em);
-    margin: 0;
-}
-
-section.hero img {
-    min-width: 10em;
-}
-
-section.hero :last-child {
-    margin-bottom: 0;
-}
+@use "partials/fonts";
+@use "partials/variables";
+@use "partials/defaults";
+@use "partials/buttons";
+@use "partials/layout";
+@use "partials/header";
+@use "partials/hero";
+@use "partials/home";
+@use "partials/footer";
+
+// .split {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+//     gap: 1rem;
+// }
+// .split>* {
+//     padding: 0 1em;
+// }
+// .split-highlight>* {
+//     background-color: #fff1;
+// }
+// .split-highlight>a:hover {
+//     background-color: rgb(var(--colour-highlight)/.6);
+// }
+
+// /* HERO */
+// /* HERO */
+// /* HERO */
+// /* HERO */
+// /* HERO */
+// section.hero {
+//     color: var(--background-gradient-colour-start);
+//     background-color: rgb(var(--colour-highlight));
+//     padding: 1em;
+//     min-width: 25em;
+// }
+// section.hero>div {
+//     display: flex;
+//     gap: clamp(1em, 5vw, 3em);
+// }
+// @media screen and (min-width: 40em) {
+//     section.hero {
+//         max-width: var(--max-hero-width);
+//         rotate: -1deg;
+//         box-shadow: 4px 4px 8px #000a;
+//         border-radius: 3px;
+//         margin: clamp(2em, 5vw, 6em) auto;
+//     }
+//     section.hero>div {
+//         align-items: center;
+//     }
+// }
+// p.quote {
+//     font-family: "Dancing Script", cursive;
+//     font-size: clamp(1.7em, 5vw, 2.3em);
+//     margin: 0;
+// }
+// section.hero img {
+//     min-width: 10em;
+// }
+// section.hero :last-child {
+//     margin-bottom: 0;
+// }

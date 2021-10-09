@@ -8,39 +8,37 @@ const Header = ({ title }) => {
     <>
       <Metadata title={title} />
       <header>
-        <section>
-          <div className="logo">
-            <Link to="/">
-              <SiteLogo />
-            </Link>
-          </div>
-          <nav id="hamnav">
-            <input type="checkbox" id="hamburger" />
-            <label htmlFor="hamburger">&#9776;</label>
-            <ul>
-              <li>
-                <Link to="/content/" className="button">
-                  Content
-                </Link>
-              </li>
-              <li>
-                <Link to="/talks/" className="button">
-                  Talks
-                </Link>
-              </li>
-              <li>
-                <Link to="/about/" className="button">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact/" className="button">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </section>
+        <div className="logo">
+          <Link to="/">
+            <SiteLogo />
+          </Link>
+        </div>
+        <nav id="hamnav">
+          <input type="checkbox" id="hamburger" />
+          <label htmlFor="hamburger">&#9776;</label>
+          <ul>
+            <li>
+              <Link to="/content/" className="button">
+                Content
+              </Link>
+            </li>
+            <li>
+              <Link to="/talks/" className="button">
+                Talks
+              </Link>
+            </li>
+            <li>
+              <Link to="/about/" className="button">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact/" className="button">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </header>
     </>
   );

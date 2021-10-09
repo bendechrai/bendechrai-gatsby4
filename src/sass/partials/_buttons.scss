@@ -1,0 +1,20 @@
+button,
+.button {
+  text-align: center;
+  padding: 0.3em 0.6em;
+
+  --lum: calc(var(--primary-colour-lum) + 10%);
+  background-color: hsl(var(--primary-colour-hue), var(--primary-colour-sat), var(--lum));
+  color: #fff;
+
+  border: none;
+  border-radius: 3px;
+  font-size: 1.2em;
+}
+button:hover,
+.button:hover {
+  --lum: calc(var(--primary-colour-lum) + 15%);
+}
+.button-big {
+  padding: 1em 1em;
+}

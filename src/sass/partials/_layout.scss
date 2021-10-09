@@ -1,0 +1,32 @@
+html {
+  height: 100%;
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    --background-gradient: var(--background-gradient-angle), var(--background-gradient-colour-start), var(--background-gradient-colour-end);
+    background: -webkit-linear-gradient(var(--background-gradient));
+    background: -moz-linear-gradient(var(--background-gradient));
+    background: -ms-linear-gradient(var(--background-gradient));
+    background: -o-linear-gradient(var(--background-gradient));
+    background: linear-gradient(var(--background-gradient));
+    background-attachment: fixed;
+
+    #___gatsby {
+      height: 100%;
+
+      #gatsby-focus-wrapper {
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        main {
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+}
